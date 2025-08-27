@@ -1,0 +1,6 @@
+greeting = "100"
+print(greeting.isdecimal())
+temputare = 76
+if temputare > 75:
+    print (" i need some water")
+    print("its hot outside")
