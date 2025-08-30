@@ -1,6 +1,3 @@
-greeting = "100"
-print(greeting.isdecimal())
-temputare = 76
-if temputare > 75:
-    print (" i need some water")
-    print("its hot outside")
+
+1-2. i tried to mispell tempature and did not recieve any error code. i believe it didnt make an error code because it isnt as important as some other words and isnt relied upon. i tried to mispell print and  it did pick it up, and giving me the correction.
+1-3. Three things i would like to create are: 1. some kind of financial helper 2. be able to make a very simple game 3. form some kind of site.
