@@ -1,4 +1,4 @@
-# 4.1
+# 4.1 (recived help) learned it!
 pizzas = ['pepperoni', 'cheese', 'deluxe']
 for pizza in pizzas:
     print(f"I like {pizza} pizza.")
@@ -82,5 +82,6 @@ pizzas = ['pepperoni','cheese','deluxe','suasage']
 for p in pizzas: print(p)
 
 mypizzas()
+
 
 
