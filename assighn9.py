@@ -241,3 +241,125 @@ my_tesla.battery.get_range()
 my_tesla.battery.upgrade_battery()
 my_tesla.battery.describe_battery()
 my_tesla.battery.get_range()
+
+# 9-10
+class Restaurant:
+    def __init__(self, name, cuisine_type):
+        self.name = name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        """Prints a description of the restaurant."""
+        print(f"{self.name} serves wonderful {self.cuisine_type} cuisine.")
+
+    def open_restaurant(self):
+        """Simulates opening the restaurant."""
+        print(f"{self.name} is now open!")
+# user_admin.py
+
+class User:
+    """A simple representation of a user."""
+
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def describe_user(self):
+        print(f"User: {self.first_name} {self.last_name}")
+
+#9-11
+
+    def __init__(self, privileges=None):
+        if privileges is None:
+            privileges = ["add post", "delete post", "ban user"]
+        self.privileges = privileges
+
+    def show_privileges(self):
+        print("Admin privileges:")
+        for privilege in self.privileges:
+            print(f"- {privilege}")
+
+
+class Admin(User):
+    """A special kind of user with admin privileges."""
+
+    def __init__(self, first_name, last_name):
+        super().__init__(first_name, last_name)
+        self.privileges = Privileges()
+
+#9-12 recieved help on this and 9-11
+
+
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+
+    def describe_user(self):
+        print(f"User: {self.first_name} {self.last_name}")
+
+#9-13
+
+    def __init__(self, sides=6):
+        self.sides = sides
+
+    def roll_die(self):
+        """Return a random number between 1 and the number of sides."""
+        return random.randint(1, self.sides)
+die_6 = Die()
+print("Rolling a 6-sided die:")
+for roll in range(10):
+    print(die_6.roll_die())
+
+# 10-sided die
+die_10 = Die(10)
+print("\nRolling a 10-sided die:")
+for roll in range(10):
+    print(die_10.roll_die())
+
+# 20-sided die
+die_20 = Die(20)
+print("\nRolling a 20-sided die:")
+for roll in range(10):
+    print(die_20.roll_die())
+#9-14
+
+# Create a list with 10 numbers and 5 letters
+lottery_items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'A', 'B', 'C', 'D', 'E']
+
+# Randomly pick 4 items
+winning_combo = random.sample(lottery_items, 4)
+
+print("Winning combination is:")
+print(winning_combo)
+print("Any ticket matching these 4 symbols wins a prize!")
+
+#9-15
+
+# The possible lottery items
+lottery_items = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'A', 'B', 'C', 'D', 'E']
+
+# Your chosen ticket
+my_ticket = [1, 'A', 5, 'C']
+
+attempts = 0
+won = False
+
+while not won:
+    attempts += 1
+    draw = random.sample(lottery_items, 4)
+    if draw == my_ticket:
+        won = True
+
+print(f"It took {attempts:,} attempts to win with the ticket {my_ticket}.")
+
+#9-16
+
+now = datetime.now()
+print("Current time:", now)
+
+# Add 5 days
+future = now + timedelta(days=5)
+print("5 days from now:", future)
+
+# Format date
+print("Formatted:", now.strftime("%A, %B %d, %Y"))
