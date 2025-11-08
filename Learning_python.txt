@@ -1,0 +1,1 @@
+ the things i have learned about python so far is the basics of how to have the code say something back, how to do math on it, how to use varianles, how to use else if, and finally how to mak game parts and logic.
